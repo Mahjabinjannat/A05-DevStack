@@ -2,7 +2,7 @@ import logoText from "../assets/logo-text.png";
 
 export default function Navbar() {
   return (
-    <div className="border-b border-b-gray-200 ">
+    <div className="border-b-[0.3px] border-b-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <div className="flex justify-between p-7 pb-5 items-center container mx-auto ">
         <div>
           <img src={logoText} alt="" />
