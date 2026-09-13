@@ -2,7 +2,7 @@ import bannerStack from "../assets/banner-stack.png";
 
 export default function Hero() {
   return (
-    <div className="flex justify-between container mx-auto items-center my-13 mr-20">
+    <div className="flex justify-between container mx-auto items-center mt-13 mb-7 mr-20">
       <div className="space-y-8">
         <h1 className="text-[55px] font-extrabold leading-none text-[#0F172A]">Build Your Ideal <br /> <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">Development Stack</span></h1>
         <p className="text-[#475569] font-jakarta leading-7 text-[18px]">
