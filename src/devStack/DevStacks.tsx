@@ -25,10 +25,15 @@ export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
       <div className="grid grid-cols-[3fr_1fr] gap-6 my-14">
         <div className="grid grid-cols-3 gap-4">
           {devStacks.map((devStack) => (
-            <DevStackCard devStack={devStack} key={devStack.id} stacks={stacks} setStacks={setStacks} />
+            <DevStackCard
+              devStack={devStack}
+              key={devStack.id}
+              stacks={stacks}
+              setStacks={setStacks}
+            />
           ))}
         </div>
-        <div className="border border-gray-200 shadow-[0px_2px_10px_-3px_rgba(0,0,0,0.05)] max-h-[200px] px-6 py-7 rounded-[15px]">
+        <div className="self-start border border-gray-200 shadow-[0px_2px_10px_-3px_rgba(0,0,0,0.05)] px-6 py-7 rounded-[15px]">
           <Stacks stacks={stacks} setStacks={setStacks} />
         </div>
       </div>

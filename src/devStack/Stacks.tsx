@@ -22,7 +22,12 @@ export default function Stacks({ stacks, setStacks }: IstacksType) {
           </p>
           <div className="flex flex-col gap-2">
             {stacks.map((stack) => (
-              <Stack stack={stack} stacks={stacks} setStacks={setStacks} />
+              <Stack
+                key={stack.id}
+                stack={stack}
+                stacks={stacks}
+                setStacks={setStacks}
+              />
             ))}
             <RemoveStack setStacks={setStacks} />
           </div>
