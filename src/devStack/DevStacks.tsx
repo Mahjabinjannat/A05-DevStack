@@ -1,4 +1,12 @@
-export default function DevStacks() {
+import { use } from "react";
+import type { IdevStacksType } from "../types/DevStacksType";
+
+interface IdevStackPromiseType {
+  devStacksPromise: Promise<IdevStacksType[]>;
+}
+export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
+  const devStacks = use(devStacksPromise);
+  
   return (
     <div className="container mx-auto mr-20">
       <h2 className="font-extrabold text-[36px] text-[#0F172A]">
