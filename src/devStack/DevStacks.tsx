@@ -1,12 +1,13 @@
 import { use } from "react";
 import type { IdevStacksType } from "../types/DevStacksType";
+import DevStack from "./DevStack";
 
 interface IdevStackPromiseType {
   devStacksPromise: Promise<IdevStacksType[]>;
 }
 export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
   const devStacks = use(devStacksPromise);
-  
+
   return (
     <div className="container mx-auto mr-20">
       <h2 className="font-extrabold text-[36px] text-[#0F172A]">
@@ -15,11 +16,19 @@ export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
           Technologies
         </span>
       </h2>
-      <p className="text-[16px] text-[#64748B]">
+      <p className="text-[16px] text-[#64748B] pt-2 font-jakarta">
         Pick one technology per category to build your ideal stack.
       </p>
-      <div></div>
-      <div></div>
+      <div className="grid grid-cols-[3fr_1fr] gap-6 my-14">
+        <div className="grid grid-cols-3 gap-4">
+          {devStacks.map((devStack) => (
+            <DevStack devStack={devStack} key={devStack.id} />
+          ))}
+        </div>
+        <div>
+          <h1>Hello..................</h1>
+        </div>
+      </div>
     </div>
   );
 }
