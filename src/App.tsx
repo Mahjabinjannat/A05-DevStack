@@ -5,6 +5,7 @@ import Hero from "./component/Hero";
 import DevStacks from "./devStack/DevStacks";
 import { Suspense } from "react";
 import type { IdevStacksType } from "./types/DevStacksType";
+import Footer from "./component/Footer";
 
 function App() {
   const devStacksPromise = async (): Promise<IdevStacksType[]> => {
@@ -19,6 +20,7 @@ function App() {
       <Suspense fallback={<h1>Loading....</h1>}>
         <DevStacks devStacksPromise={devStacksPromise()} />
       </Suspense>
+      <Footer />
       <ToastContainer />
     </>
   );
