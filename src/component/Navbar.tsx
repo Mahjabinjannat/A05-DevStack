@@ -36,7 +36,6 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="container mx-auto">
         <div className="grid grid-cols-3 items-center px-4 py-4 lg:hidden">
-          {/* Left - Hamburger */}
           <div className="flex justify-start">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
