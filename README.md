@@ -81,14 +81,16 @@ Users can:
 
 ## 1. What is JSX, and why is it used in React?
 
-JSX stands for **JavaScript XML**. It allows us to write HTML-like code inside JavaScript or TypeScript.
+JSX stands for JavaScript XML. It allows us to write HTML-like code inside JavaScript.
 
-React uses JSX because it makes the UI code easier to read and lets us write the structure of a component together with its logic.
+React uses JSX because it makes creating and understanding UI components easier.
 
-Example:
+### Example:
 
 ```jsx
-<h1>Hello React!</h1>
+function App() {
+  return <h1>Hello World!</h1>;
+}
 ```
 
 ## 2. What is the difference between props and state?
@@ -122,7 +124,6 @@ When a user adds or removes a technology, setSelectedStack updates the selected 
 
 ## 4. What does the useEffect hook do, and why did you need it to load the JSON data?
 
-
 The `useEffect` hook is used in React to perform side effects, such as fetching data or interacting with external systems.
 
 However, in this project, I did **not** use `useEffect` to load the JSON data. Instead, I used React's **`use()` hook** to read the data from a Promise.
@@ -130,8 +131,7 @@ However, in this project, I did **not** use `useEffect` to load the JSON data. I
 ### Example:
 
 ```tsx
-const technologiesPromise = fetch("/data.json")
-  .then((res) => res.json());
+const technologiesPromise = fetch("/data.json").then((res) => res.json());
 
 const technologies = use(technologiesPromise);
 ```
