@@ -122,16 +122,18 @@ When a user adds or removes a technology, setSelectedStack updates the selected 
 
 ## 4. What does the useEffect hook do, and why did you need it to load the JSON data?
 
-The jsx`useEffect` hook is used to perform side effects in a React component.
 
-I used it to load the technology data from the JSON file when the component was rendered.
+The `useEffect` hook is used in React to perform side effects, such as fetching data or interacting with external systems.
 
-```jsx
-useEffect(() => {
-  fetch("/data.json")
-    .then((res) => res.json())
-    .then((data) => setTechnologies(data));
-}, []);
+However, in this project, I did **not** use `useEffect` to load the JSON data. Instead, I used React's **`use()` hook** to read the data from a Promise.
+
+### Example:
+
+```tsx
+const technologiesPromise = fetch("/data.json")
+  .then((res) => res.json());
+
+const technologies = use(technologiesPromise);
 ```
 
 ## 5. Why does every item in a .map() list need a unique key prop?
@@ -191,16 +193,47 @@ The child can then call that function:
 <button onClick={() => onAdd(technology)}>Add to Stack</button>
 ```
 
-So the basic idea is:
+### Data Flow
 
+```text
 Parent
-↓
-Props
-↓
+   ↓
+ Props
+   ↓
 Child
 
 Child
-↓
+   ↓
 Callback Function
-↓
+   ↓
 Parent
+```
+
+## 🎯 What I Learned
+
+While building this project, I practiced:
+
+- React components
+- Props and state
+- `useState`
+- `use` , `useEffect`
+- Conditional rendering
+- `.map()`, `filter` and unique keys
+- Parent-child communication
+- TypeScript interfaces
+- Tailwind CSS
+- Fetching JSON data
+- Managing selected items
+- Building reusable components
+
+## 👩‍💻 Author
+
+**Mahjabin Jannat**
+
+🎓 Computer Science Graduate
+
+💻 Aspiring Frontend Developer
+
+### 🔗 Connect With Me
+
+- GitHub: [Mahjabin Jannat](https://github.com/Mahjabinjannat)
