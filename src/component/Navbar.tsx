@@ -35,7 +35,6 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="container mx-auto">
-        {/* ================= MOBILE / TABLET ================= */}
         <div className="grid grid-cols-3 items-center px-4 py-4 lg:hidden">
           {/* Left - Hamburger */}
           <div className="flex justify-start">
@@ -47,7 +46,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Center - Logo */}
           <div className="flex justify-center">
             <img src={logoText} alt="Dev Stack" className="w-[110px]" />
           </div>
@@ -64,7 +62,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ================= MOBILE MENU ================= */}
         {isMenuOpen && (
           <div className="border-t border-gray-100 px-5 py-5 lg:hidden">
             <ul className="flex flex-col gap-4">
@@ -81,14 +78,12 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* ================= DESKTOP ================= */}
         <div className="hidden items-center justify-between px-7 py-5 lg:flex">
           {/* Logo */}
           <div>
             <img src={logoText} alt="Dev Stack" />
           </div>
 
-          {/* Navigation */}
           <ul className="flex items-center gap-5">
             <li className="text-[14px] font-medium text-[#DB2777]">Home</li>
 
@@ -101,7 +96,6 @@ export default function Navbar() {
             <li className="text-[14px] text-[#475569]">Contact</li>
           </ul>
 
-          {/* Auth */}
           <div className="flex items-center gap-5">
             <button className="text-[14px] text-[#475569]">Sign In</button>
 
