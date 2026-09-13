@@ -90,3 +90,117 @@ Example:
 ```jsx
 <h1>Hello React!</h1>
 ```
+
+## 2. What is the difference between props and state?
+
+Props are data passed from a parent component to a child component. They are read-only.
+
+State is data managed inside a component. When state changes, React re-renders the component.
+
+Props → Parent → Child
+State → Managed inside the component
+
+For example:
+
+```jsx
+<TechnologyCard technology={technology} />
+```
+
+Here, technology is passed to the child component as a prop.
+
+## 3. What does the useState hook do, and where did you use it in this project?
+
+The useState hook allows a React component to store and update data.
+
+I used useState to keep track of the technologies selected by the user.
+
+```jsx
+const [selectedStack, setSelectedStack] = useState<Technology[]>([]);
+```
+
+When a user adds or removes a technology, setSelectedStack updates the selected stack.
+
+## 4. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+The jsx`useEffect` hook is used to perform side effects in a React component.
+
+I used it to load the technology data from the JSON file when the component was rendered.
+
+```jsx
+useEffect(() => {
+  fetch("/data.json")
+    .then((res) => res.json())
+    .then((data) => setTechnologies(data));
+}, []);
+```
+
+## 5. Why does every item in a .map() list need a unique key prop?
+
+React needs a unique key to identify each item in a list.
+
+It helps React understand which items were added, removed, or changed and update the UI efficiently.
+
+```jsx
+technologies.map((technology) => (
+  <TechnologyCard key={technology.id} technology={technology} />
+));
+```
+
+Here, technology.id is used as the unique key.
+
+## 6. What is conditional rendering? Show one place you used it.
+
+Conditional rendering means displaying different UI elements depending on a condition.
+
+For example, I used it to show a message when the user's stack is empty.
+
+```jsx
+{
+  selectedStack.length === 0 ? (
+    <p>Your stack is empty. Start adding technologies!</p>
+  ) : (
+    <SelectedStack technologies={selectedStack} />
+  );
+}
+```
+
+If there are no selected technologies, the empty-stack message is displayed. Otherwise, the selected technologies are shown.
+
+## 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+A parent component can pass data to a child using props.
+
+<TechnologyCard technology={technology} />
+
+The child receives the data through its props:
+
+function TechnologyCard({ technology }: Props) {
+return <h2>{technology.name}</h2>;
+}
+
+To send something back to the parent, the parent can pass a function as a prop.
+
+<TechnologyCard
+  technology={technology}
+  onAdd={handleAddTechnology}
+/>
+
+The child can then call that function:
+
+```jsx
+<button onClick={() => onAdd(technology)}>Add to Stack</button>
+```
+
+So the basic idea is:
+
+Parent
+↓
+Props
+↓
+Child
+
+Child
+↓
+Callback Function
+↓
+Parent
