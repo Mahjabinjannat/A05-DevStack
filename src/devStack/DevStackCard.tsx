@@ -1,8 +1,12 @@
 import { FaStar } from "react-icons/fa";
 import type { DevStackTheme, IdevStacksType } from "../types/DevStacksType";
+import type { Dispatch, SetStateAction } from "react";
+import { toast } from "react-toastify";
 
 interface IdevStackType {
   devStack: IdevStacksType;
+  stacks: IdevStacksType[];
+  setStacks: Dispatch<SetStateAction<IdevStacksType[]>>;
 }
 
 const badgeThemes: Record<DevStackTheme, string> = {
@@ -23,7 +27,18 @@ const badgeThemes: Record<DevStackTheme, string> = {
   vscode: "bg-blue-50 text-[#007ACC] border border-blue-200",
 };
 
-export default function DevStackCard({ devStack }: IdevStackType) {
+export default function DevStackCard({
+  devStack,
+  stacks,
+  setStacks,
+}: IdevStackType) {
+  const handleAddToCart = () => {
+    setStacks((prev) => [...prev, devStack]);
+    toast.success(`${devStack.name} added to the stack cart succesfully`);
+  };
+
+  const isSelected = stacks.some((stack) => stack.id === devStack.id);
+
   return (
     <div className="rounded-[16px] border border-gray-200 shadow-[0px_2px_10px_-3px_rgba(0,0,0,0.05)] px-6 py-4 space-y-2.5">
       <div className="relative">
@@ -53,8 +68,12 @@ export default function DevStackCard({ devStack }: IdevStackType) {
           {devStack.rating}
         </p>
       </div>
-      <button className="bg-[#0A0F1D] text-white w-full text-[12px] font-medium py-2 rounded-[10px] mt-5 mb-2 cursor-pointer">
-        Add To Stack
+      <button
+        className={` ${isSelected ? "bg-gray-200 text-gray-600 border border-gray-300" : "bg-[#0A0F1D] text-white"} w-full text-[12px] font-medium py-2 rounded-[10px] mt-5 mb-2 cursor-pointer`}
+        onClick={handleAddToCart}
+        disabled={isSelected}
+      >
+        {isSelected ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

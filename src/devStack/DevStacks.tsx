@@ -1,12 +1,15 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { IdevStacksType } from "../types/DevStacksType";
 import DevStackCard from "./DevStackCard";
+import Stacks from "./Stacks";
 
 interface IdevStackPromiseType {
   devStacksPromise: Promise<IdevStacksType[]>;
 }
 export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
   const devStacks = use(devStacksPromise);
+
+  const [stacks, setStacks] = useState<IdevStacksType[]>([]);
 
   return (
     <div className="container mx-auto mr-20">
@@ -22,11 +25,11 @@ export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
       <div className="grid grid-cols-[3fr_1fr] gap-6 my-14">
         <div className="grid grid-cols-3 gap-4">
           {devStacks.map((devStack) => (
-            <DevStackCard devStack={devStack} key={devStack.id} />
+            <DevStackCard devStack={devStack} key={devStack.id} stacks={stacks} setStacks={setStacks} />
           ))}
         </div>
-        <div>
-          <h1>Hello..................</h1>
+        <div className="border border-gray-200 shadow-[0px_2px_10px_-3px_rgba(0,0,0,0.05)] max-h-[200px] px-6 py-7 rounded-[15px]">
+          <Stacks stacks={stacks} setStacks={setStacks} />
         </div>
       </div>
     </div>
