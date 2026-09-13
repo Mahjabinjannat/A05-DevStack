@@ -7,7 +7,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "theme": "react"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     "rating": 4.7,
     "difficulty": "Advanced",
-    "badge": "Fast"
+    "badge": "Fast",
+    "theme": "nextjs"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "theme": "nodejs"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     "rating": 4.6,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "express"
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "theme": "mongodb"
   },
   {
     "id": 6,
@@ -57,7 +62,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "postgresql"
   },
   {
     "id": 7,
@@ -67,7 +73,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "javascript"
   },
   {
     "id": 8,
@@ -77,7 +84,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "theme": "typescript"
   },
   {
     "id": 9,
@@ -87,7 +95,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Fast"
+    "badge": "Fast",
+    "theme": "tailwind"
   },
   {
     "id": 10,
@@ -97,7 +106,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     "rating": 4.5,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "sass"
   },
   {
     "id": 11,
@@ -107,7 +117,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Containers"
+    "badge": "Containers",
+    "theme": "docker"
   },
   {
     "id": 12,
@@ -117,7 +128,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
     "rating": 4.7,
     "difficulty": "Advanced",
-    "badge": "Containers"
+    "badge": "Containers",
+    "theme": "kubernetes"
   },
   {
     "id": 13,
@@ -127,7 +139,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "git"
   },
   {
     "id": 14,
@@ -137,7 +150,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "theme": "github"
   },
   {
     "id": 15,
@@ -147,6 +161,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "theme": "vscode"
   }
 ]

@@ -1,3 +1,20 @@
+export type DevStackTheme =
+  | "react"
+  | "nextjs"
+  | "nodejs"
+  | "express"
+  | "mongodb"
+  | "postgresql"
+  | "javascript"
+  | "typescript"
+  | "tailwind"
+  | "sass"
+  | "docker"
+  | "kubernetes"
+  | "git"
+  | "github"
+  | "vscode";
+
 export interface IdevStacksType {
   id: number;
   name: string;
@@ -7,4 +24,5 @@ export interface IdevStacksType {
   rating: number;
   difficulty: string;
   badge: string;
+  theme: DevStackTheme;
 }

@@ -1,6 +1,6 @@
 import { use } from "react";
 import type { IdevStacksType } from "../types/DevStacksType";
-import DevStack from "./DevStack";
+import DevStackCard from "./DevStackCard";
 
 interface IdevStackPromiseType {
   devStacksPromise: Promise<IdevStacksType[]>;
@@ -22,7 +22,7 @@ export default function DevStacks({ devStacksPromise }: IdevStackPromiseType) {
       <div className="grid grid-cols-[3fr_1fr] gap-6 my-14">
         <div className="grid grid-cols-3 gap-4">
           {devStacks.map((devStack) => (
-            <DevStack devStack={devStack} key={devStack.id} />
+            <DevStackCard devStack={devStack} key={devStack.id} />
           ))}
         </div>
         <div>
