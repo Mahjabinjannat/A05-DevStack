@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 body {
   margin: 0;
@@ -8,4 +8,17 @@ body {
 
 @theme {
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --brand-gradient: linear-gradient(
+    90deg,
+    #FF5722 0%,
+    #D81B7E 50%,
+    #7C3AED 100%
+  );
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--brand-gradient);
 }
