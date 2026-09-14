@@ -6,10 +6,10 @@ export default function Footer() {
       {/* Footer Top Section */}
       <div className="container mx-auto my-12 px-5 sm:my-16 lg:pr-14">
         {/* Mobile & Tablet */}
-        <div className="flex flex-col gap-5 lg:hidden">
+        <div className="flex flex-col gap-5 lg:hidden items-center">
           <img src={logoText} alt="Dev Stack" className="w-fit" />
 
-          <p className="text-[12px] text-[#64748B]">
+          <p className="text-[12px] text-[#64748B] text-center">
             Curated tools, technologies, and resources for developers building
             modern software.
           </p>
