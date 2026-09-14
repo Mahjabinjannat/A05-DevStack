@@ -2,7 +2,7 @@ import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
-import DevStacks from "./devStack/DevStacks";
+import DevStacks from "./component/devStack/DevStacks";
 import { Suspense } from "react";
 import type { IdevStacksType } from "./types/DevStacksType";
 import Footer from "./component/Footer";

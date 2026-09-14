@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { IdevStacksType } from "../types/DevStacksType";
+import type { IdevStacksType } from "../../types/DevStacksType";
 import { RxCross2 } from "react-icons/rx";
 import { toast } from "react-toastify";
 

@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { IdevStacksType } from "../types/DevStacksType";
+import type { IdevStacksType } from "../../types/DevStacksType";
 import Stack from "./Stack";
 import RemoveStack from "./RemoveStack";
 

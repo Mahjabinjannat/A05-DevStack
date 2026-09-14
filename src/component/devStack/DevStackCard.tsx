@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import type { DevStackTheme, IdevStacksType } from "../types/DevStacksType";
+import type { DevStackTheme, IdevStacksType } from "../../types/DevStacksType";
 import type { Dispatch, SetStateAction } from "react";
 import { toast } from "react-toastify";
 

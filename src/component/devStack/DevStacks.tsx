@@ -1,5 +1,5 @@
 import { use, useState } from "react";
-import type { IdevStacksType } from "../types/DevStacksType";
+import type { IdevStacksType } from "../../types/DevStacksType";
 import DevStackCard from "./DevStackCard";
 import Stacks from "./Stacks";
 
