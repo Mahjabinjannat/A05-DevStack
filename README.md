@@ -193,21 +193,6 @@ The child can then call that function:
 <button onClick={() => onAdd(technology)}>Add to Stack</button>
 ```
 
-### Data Flow
-
-```text
-Parent
-   ↓
- Props
-   ↓
-Child
-
-Child
-   ↓
-Callback Function
-   ↓
-Parent
-```
 
 ## 🎯 What I Learned
 
